@@ -372,3 +372,81 @@ table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
 }
+
+/* Header: info on the left, headshot on the right. */
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+td.header-photo {
+    vertical-align: middle;
+}
+
+img.headshot {
+    display: block;
+    margin-left: auto;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* Tablets and small laptops: less side padding. */
+@media (max-width: 800px) {
+    body {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+/* Phones: stack the header (photo on top), tighten spacing. */
+@media (max-width: 600px) {
+    body {
+        padding: 8px 16px 24px;
+    }
+
+    #layout-content {
+        padding-left: 0;
+        padding-right: 0;
+        overflow-wrap: break-word;
+    }
+
+    table#header,
+    table#header tbody,
+    table#header td {
+        display: block;
+        width: 100%;
+    }
+
+    table#header tr {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    div#toptitle {
+        margin-bottom: 0.8em;
+    }
+
+    img.headshot {
+        width: 150px;
+        margin: 4px auto 0;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    table.imgtable td {
+        vertical-align: top;
+    }
+
+    table.imgtable td:first-child {
+        padding-right: 10px;
+    }
+}
