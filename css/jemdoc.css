@@ -379,6 +379,15 @@ html {
     text-size-adjust: 100%;
 }
 
+table#header {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table#header td {
+    padding: 0;
+}
+
 td.header-photo {
     vertical-align: middle;
 }
